@@ -1,0 +1,226 @@
+.container_desktop
+    display: flex
+    justify-content: space-between
+    padding:
+        left: 20px
+    position: fixed
+    overflow: hidden
+    left: 0
+    right: 0
+    top: 0
+    width: 100%
+    background-color: #ffffff
+    z-index: 9
+
+.contaner_logo-block 
+    display: flex
+    align-items: center
+    width: 210px
+
+.container_menu 
+    display: flex
+    li
+        margin:
+            left: 15px
+            right: 15px 
+        &.curent
+            a 
+                color: #d9b256
+    a 
+        display: flex
+        align-items: center
+        height: 100%
+        color: #242424
+        font-weight: 700
+        text-transform: uppercase
+        transition: 0.3s
+        &:hover 
+            color: #d9b256
+
+.container_open-elements
+    width: 210px
+    display: flex
+    justify-content: flex-end
+
+.container_search
+    display: flex
+    background-color: #d9b256
+    height: 70px
+
+.container_search-element 
+    width: 60px
+    display: flex
+    justify-content: center
+    align-items: center
+    cursor: pointer
+
+.container_search-open
+    position: absolute
+    width: 100%
+    height: 60px
+    background-color: #ffffff
+    top: 0
+    height: 100%
+    overflow: hidden
+    max-height: 0
+    transition: max-height 0.3s ease-in-out
+    &.active
+        max-height: 500px
+
+.contaier_search-form 
+    display: flex
+    align-items: center
+    width: 100%
+    height: 70px
+    input
+        width: 90%
+        font-size: 22px
+        font-weight: 400
+        text-transform: uppercase
+    button  
+        position: relative
+        top: -2px
+        margin:
+            left: 20px
+    svg 
+        width: 20px
+
+.container_close-search 
+    position: absolute
+    width: 30px
+    height: 30px
+    right: 30px
+    top: 50%
+    transform: translate(0, -50%)
+    cursor: pointer
+    &:after, &:before
+        content: ""
+        background-color: #000000
+        width: 2px
+        height: 32px
+        display: block
+        position: absolute
+        left: 14px
+        top: -1px
+        cursor: pointer
+    &:after
+        transform: rotate(45deg)
+    &:before
+        transform: rotate(-45deg)
+
+.container_sidebar 
+    width: 100%
+    height: 100%
+    top: 0
+    position: fixed
+    z-index: 9
+    display: none
+    overflow-x: hidden
+
+    &.active 
+        display: flex
+
+.close-space 
+    width: 70%
+    height: 100%
+
+.element_sidebar
+    width: 30%
+    height: 100%
+    overflow-y: auto
+    position: relative
+    background-color: #ffffff
+    padding:
+        top: 60px
+        left: 30px
+        right: 30px
+    right: -30%
+    transition: 0.3s
+    &.active 
+        right: 0
+
+.container_close-sidebar
+
+.element_title 
+    margin-bottom: 30px
+    p, h1, h2, h3, h4, h5, h6 
+        font-size: 22px
+        line-height: 24px
+        font-family: 'Sylfaen'
+        font-weight: normal
+
+.element_form-sidebar
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+    fieldset
+        width: 100%
+
+.container_close-sidebar 
+    position: absolute
+    height: 20px      
+    width: 20px
+    top: 20px
+    right: 20px
+    cursor: pointer
+    &:after, &:before
+        content: ""
+        position: absolute
+        display: block
+        width: 2px
+        height: 20px
+        background-color: #000000
+        cursor: pointer
+        left: 10px
+    &:after
+        transform: rotate(45deg)
+    &:before
+        transform: rotate(-45deg)
+
+
+.sidebar-form-element 
+    display: flex
+    flex-direction: column
+    margin:
+        bottom: 55px
+    position: relative
+    transition: width 0.5s linear
+    &:after, &:before
+        content: ""
+        display: block
+        position: absolute
+        bottom: 0
+        height: 2px
+        left: 0
+        transition: 0.3s
+    &:after
+        width: 100%
+        background-color: rgba(0, 0, 0, 0.1)
+    &:before
+        width: 0
+        background-color: #d9b256
+        transition: width 0.4s linear
+    &.active 
+        &:before
+            width: 100%
+
+    label 
+        font-weight: 600
+        font-size: 14px
+        top: 0px
+        line-height: 60px
+        position: absolute
+        transition: 0.3s
+        &.active
+            top: -30px
+    input 
+        height: 60px
+        position: relative
+        display: block
+
+    textarea 
+        padding-top: 20px
+        height: 100px
+        width: 100%
+        resize: none
+    

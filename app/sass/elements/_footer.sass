@@ -1,0 +1,102 @@
+.container_footer-desk-top 
+    background-color: #4d4f5b
+    padding:
+        top: 50px
+        bottom: 50px
+
+.container_footer-menu
+    display: flex
+    justify-content: center
+    width: 100%
+    margin-bottom: 75px
+    ul 
+        display: flex
+        li 
+            margin:
+                left: 15px
+                right: 15px  
+            a 
+                color: #ffffff
+                text-transform: uppercase
+                transition: 0.3s
+                font-weight: 300
+                &:hover 
+                    color: #d9b256
+
+.container_footer-grid-element 
+    width: 100%
+
+.element_footer-grid-element-title
+    width: 100%
+    margin:
+        bottom: 25px
+    p, h1, h2, h3, h4, h5, h6 
+        color: #ffffff
+        font-weight: 700
+        font-size: 18px
+        width: 100%
+        text-align: center
+        text-transform: uppercase
+
+.element_footer-grid-element-text 
+    display: flex
+    flex-direction: column
+    align-items: center
+    a, p 
+        color: #ffffff
+        font-size: 16px
+    a 
+        &:hover 
+            color: #ffffff
+        &.mail
+            margin-top: 10px
+
+.container_social-media
+    display: flex
+    justify-content: center
+
+.element_social-media-item 
+    height: 41px
+    width: 41px
+    background-color: #ffffff
+    display: flex
+    justify-content: center
+    align-items: center
+    margin:
+        left: 10px
+        right: 10px
+    transition: 0.3s
+    svg 
+        width: 21px
+        height: 21px
+        fill: #d9b256
+        transition: 0.3s
+    &:hover 
+        background-color: #d9b256
+        svg 
+            fill: #ffffff
+
+
+
+
+.container_footer-bottom 
+    background-color: #000000
+    padding:
+        top: 20px
+        bottom: 20px
+    p 
+        color: #5d5d5d
+        font-size: 16px
+        line-height: 30px
+        width: 100%
+        text-align: center
+
+@media all and (max-width: 991px)
+    .container_footer-menu 
+        ul
+            flex-direction: column
+            li 
+                text-align: center
+                margin-bottom: 30px
+    .container_footer-grid-element
+        margin-bottom: 30px

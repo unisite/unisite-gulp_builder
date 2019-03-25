@@ -1,0 +1,347 @@
+@import 'elements/_general'
+
+body 
+    box-sizing: border-box
+    font-family: 'Montserrat', sans-serif
+    font-weight: 400
+    font-size: 14px
+    font-style: normal
+    color: #242424
+    a 
+        color: inherit
+        &:hover, &:focus, &:visited
+            color: inherit
+            text-decoration: none
+    input, textarea, label
+        outline: 0
+        border: 0
+        box-shadow: none
+        &:hover, &:focus, &:visited
+            outline: 0
+            border: 0
+            box-shadow: none   
+
+    .button 
+        display: block
+        padding:
+            left: 20px
+            right: 20px
+            top: 10px
+            bottom: 10px
+        position: relative
+        color: #d9b256!important
+        font-weight: 600
+        text-transform: uppercase
+        font-size: 14px
+        align-items: flex-start
+        justify-content: center
+        &:after, &:before
+            content: ""
+            display: block
+            position: absolute
+            width: 30px
+            height: 2px
+            transition: width 0.2s linear
+            background-color: #d9b256
+        &:after
+            left: 0
+            top: 0
+        &:before 
+            right: 0
+            bottom: 0
+        &:hover 
+            color: #d9b256 
+            &:after
+                width: 100%
+            &:before 
+                width: 100%
+        &.fill
+            background-color: #d9b256
+            color: #ffffff!important 
+            &:after
+                top: -4px
+            &:before
+                bottom: -4px
+    .container_section-name-items
+        margin-bottom: 25px
+        display: flex
+        flex-direction: column
+        align-items: center
+        &.start
+            align-items: flex-start
+        &.end
+            align-items: flex-end
+    .conteiner_section-category
+        p, h1, h2, h3, h4, h5, h6 
+            font-size: 21px
+            color: #d9b256
+            font-weight: 700
+            line-height: 30px
+            text-transform: uppercase
+        &.lines-center
+            position: relative
+            &:after, &:before
+                content: ""
+                position: absolute
+                width: 60px
+                height: 1px
+                display: block
+                top: 45%
+                transform: translate(0, -50%)
+                background-color: #d9b256
+            &:after
+                right: -70px
+            &:before
+                left: -70px
+            p 
+                text-align: left
+                &:after, &:before
+                    content: ""
+                    position: absolute
+                    width: 30px
+                    height: 1px
+                    display: block
+                    bottom: 8px
+                    background-color: #d9b256
+                &:after
+                    right: -40px
+                &:before
+                    left: -40px
+        &.lines-right
+            position: relative
+            &:after
+                content: ""
+                position: absolute
+                width: 60px
+                height: 1px
+                display: block
+                top: 45%
+                transform: translate(0, -50%)
+                background-color: #d9b256
+            &:after
+                right: -70px
+            p 
+                text-align: right
+                &:after
+                    content: ""
+                    position: absolute
+                    width: 30px
+                    height: 1px
+                    display: block
+                    bottom: 8px
+                    background-color: #d9b256
+                &:after
+                    right: -40px
+        &.lines-left
+            position: relative
+            &:before
+                content: ""
+                position: absolute
+                width: 60px
+                height: 1px
+                display: block
+                top: 45%
+                transform: translate(0, -50%)
+                background-color: #d9b256
+            &:before
+                right: -70px
+            p 
+                &:before
+                    content: ""
+                    position: absolute
+                    width: 30px
+                    height: 1px
+                    display: block
+                    bottom: 8px
+                    background-color: #d9b256
+                &:before
+                    right: -40px
+        
+    .container_section-name 
+        width: 100%
+        p, h1, h2, h3, h4, h5, h6
+            width: 100%
+            text-align: center
+            font-family: 'Sylfaen'
+            font-size: 48px
+            line-height: 70px
+            color: #242424
+        &.left
+            p 
+                text-align: left
+        &.right
+            p 
+                text-align: right
+    .see-more 
+        width: 100%
+        display: flex
+        a 
+            color: #d9b256
+            text-transform: none
+            text-decoration: none
+            transition: 0.3s
+            font-weight: 600
+            position: relative
+            &:after 
+                content: ""
+                display: block 
+                position: absolute
+                height: 2px 
+                background-color: #d9b256
+                left: 0 
+                width: 0
+                transition: width 0.3s
+            &:hover 
+                &:after 
+                    width: 100%
+        &.start
+            justify-content: flex-start
+        &.center
+            justify-content: center
+        &.end
+            justify-content: flex-end
+    .container_section  
+        padding:
+            top: 80px
+            bottom: 80px
+
+.container_header-section 
+    position: relative
+    height: 320px
+    background-position: 50% 100%
+    background-repeat: no-repeat
+
+.container_page-desc
+    position: absolute 
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: rgba(0, 0, 0, 0.6)
+    display: flex 
+    align-items: center
+    justify-content: center
+    flex-direction: column
+
+.element_page-name 
+    p, h1, h2, h3, h4, h5, h6 
+        font-family: 'Sylfaen'
+        color: #ffffff
+        font-size: 48px
+
+.container_breadcrumbs
+    display: flex
+    justify-content: center
+    align-items: center
+    a 
+        color: #ffffff!important
+        transition: 0.3s
+        &:hover 
+            color: #d9b256!important
+        &:last-child
+            &:hover 
+                color: #ffffff!important
+    span 
+        margin:
+            left: 5px
+            right: 5px
+        svg 
+            fill: #ffffff
+            width: 12px
+            height: 12px
+
+.container-navigation-buttons
+    display: flex
+    justify-content: space-between
+    margin-top: 50px
+    align-items: center
+
+.nav-button 
+    color: #90929b
+    position: relative
+    display: flex
+    align-items: center
+    line-height: 24px
+    text-transform: uppercase
+    &:after, &:before
+        content: ""
+        display: block 
+        position: absolute 
+        width: 1px
+        height: 7px
+        background-color: #90929b
+        transition: transform .2s
+    &.prev
+        padding:
+            left: 15px
+        &:after, &:before
+            left: 0
+        &:before
+            top: 50%
+        &:after
+            top: 5px
+        &:hover 
+            &:before
+                top: 50%
+                transform: translate(0, -1px) rotate(-40deg)
+            &:after
+                top: 5px
+                transform: translate(0, 1px) rotate(40deg)
+    &.next
+        padding:
+            right: 15px
+        &:after, &:before
+            right: 0
+        &:before
+            top: 50%
+        &:after
+            top: 5px
+        &:hover 
+            &:before
+                top: 50%
+                transform: translate(0, -1px) rotate(40deg)
+            &:after
+                top: 5px
+                transform: translate(0, 1px) rotate(-40deg)
+.see-all-publications
+    display: flex
+    flex-wrap: wrap
+    width: 20px
+    span
+        width: 8px
+        height: 8px
+        background-color: #4d4f5b
+        border-radius: 2px
+        transition: 0.3s
+        margin:
+            left: 1px
+            right: 1px
+            bottom: 1px
+            top: 1px
+    &:hover 
+        span
+            background-color: #d9b256
+
+.owl-nav
+    svg
+        width: 35px
+
+@media all and (max-width: 425px)
+    .container_section-name-items
+        .conteiner_section-category
+            p 
+                font-size: 16px
+                line-height: 25px
+            &.lines-center
+                &:before, &:after
+                    width: 40px
+                &:before
+                    left: -50px
+                &:after
+                    right: -50px
+        .container_section-name 
+            p 
+                font-size: 38px
+
+@import 'elements/_header'
+@import 'elements/_footer'
